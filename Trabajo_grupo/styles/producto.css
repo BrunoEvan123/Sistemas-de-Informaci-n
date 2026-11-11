@@ -1,1 +1,260 @@
 /* Estilos de la página de producto */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fffdfb;
+    color: #3d3333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #fffdfb;
+}
+
+header a {
+    text-decoration: none;
+    color: #3d3333;
+}
+
+header strong {
+    display: block;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+header small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    color: #a47d7d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #bd8585;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee5e1;
+}
+
+main {
+    max-width: 1250px;
+    margin: 60px auto;
+    padding: 0 35px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.galeria-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#carril-1 {
+    width: 100%;
+    height: 550px;
+    background-color: #f7eeeb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#carril-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#carril-2 {
+    display: flex;
+    gap: 12px;
+}
+
+#carril-2 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+main section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+main section:nth-child(2) > div:first-child {
+    color: #a47d7d;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 500;
+    color: #493b3b;
+}
+
+#ranking {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #827676;
+}
+
+.estrellas_grupo {
+    color: #c89c72;
+    font-size: 18px;
+}
+
+main section:nth-child(2) > div:nth-of-type(3) {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+main section:nth-child(2) > div:nth-of-type(4) {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #796e6e;
+}
+
+main section:nth-child(2) > div:nth-of-type(5) {
+    color: #66866b;
+    font-size: 13px;
+}
+
+#dedicatoria {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    border: 1px solid #e5d8d3;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+#dedicatoria:focus {
+    border-color: #bd8585;
+}
+
+main section:nth-child(2) p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #796e6e;
+}
+
+#cantidad_producto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.indicador-cantidad {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5d8d3;
+    width: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.btn-cantidad {
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-cantidad:hover {
+    background-color: #f7eeeb;
+}
+
+#cantidad-producto {
+    width: 45px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-compra {
+    width: 100%;
+    padding: 17px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b98282;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-compra:hover {
+    background-color: #986767;
+}
+
+footer {
+    padding: 35px;
+    text-align: center;
+    background-color: #f8f0ed;
+    color: #927b7b;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    #carril-1 {
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
