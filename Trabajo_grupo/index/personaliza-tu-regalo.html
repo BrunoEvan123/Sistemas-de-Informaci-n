@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu regalo | A primera vista</title>
+</head>
+
+<body>
+    <!-- Navegación -------------------------------------------------------------------------------------------------------->
+    <header>
+        <div>
+            <a href="producto.html">
+                <strong>A primera vista</strong>
+                <small>FLORES QUE SE QUEDAN</small>
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="producto.html">Tienda provisional - aún falta</a></li>
+                <li><a href="personaliza-tu-regalo.html" aria-current="page">Personaliza tu regalo</a></li>
+                <li><a href="#historia">Nuestra historia</a></li>
+                <li><a href="#mis-pedidos">Mis pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Introducción ------------------------------------------------------------------------------------------------------>
+    <main>
+        <section class="bloque" id="personalizacion">
+            <p>UN REGALO QUE SOLO PUEDE SER VUESTRO</p>
+            <h1>Cuéntanos lo que imaginas.</h1>
+            <p>
+                Lo diseñamos contigo. Primero revisamos tu idea y acordamos los detalles.
+                Solo pagas cuando el diseño y el precio estén confirmados.
+            </p>
+        </section>
+
+        <!-- Pasos del pedido ---------------------------------------------------------------------------------------------->
+        <nav aria-label="Etapas del pedido personalizado">
+            <ol>
+                <li><strong>01 Tu idea</strong></li>
+                <li>02 Revisión</li>
+                <li>03 Acuerdo y pago</li>
+            </ol>
+        </nav>
+
+        <hr>
+
+        <!-- Formulario de personalización ---------------------------------------------------------------------------------->
+        <form id="formulario-personalizacion">
+            <div class="contenido-personalizacion">
+                <div class="datos-pedido">
+
+                    <!-- Primera parte: idea del cliente -->
+                    <section class="bloque" id="tu-idea">
+                        <h2>01. Ese regalo que tienes en mente</h2>
+
+                        <div>
+                            <label for="nombre-idea">Nombre de tu idea</label>
+                            <br>
+                            <input type="text" id="nombre-idea" name="nombre_idea"
+                                   placeholder="Para nuestro aniversario" required>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="descripcion-idea">¿Cómo te gustaría que fuera?</label>
+                            <br>
+                            <textarea id="descripcion-idea" name="descripcion_idea"
+                                      rows="5" cols="60" required
+                                      placeholder="Cuéntanos qué flores, colores y detalles imaginas para tu regalo...">Un ramo romántico de 18 rosas hechas a mano con pipas, en rosa empolvado y malva, con envoltorio marfil y un lazo de satén. Es para nuestro aniversario; me gustaría una composición delicada y muy especial.</textarea>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="imagenes-referencia">Imágenes de referencia · Opcional</label>
+                            <br>
+                            <input type="file" id="imagenes-referencia" name="imagenes_referencia"
+                                   accept=".jpg,.jpeg,.png,.webp" multiple>
+                            <p>Adjunta imágenes JPG, PNG o WEBP. Referencia: máximo 5 imágenes de 10 MB cada una.</p>
+                            <p><small>Los límites de cantidad y tamaño necesitarán validación cuando se programe el formulario.</small></p>
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <!-- Segunda parte: características del regalo -->
+                    <section class="bloque" id="detalles-regalo">
+                        <h2>02. Los pequeños detalles</h2>
+
+                        <div>
+                            <label for="numero-flores">Número de flores</label>
+                            <br>
+                            <input type="number" id="numero-flores" name="numero_flores"
+                                   min="3" max="50" value="18" required>
+                            <p><small>Entre 3 y 50 flores.</small></p>
+                        </div>
+
+                        <div>
+                            <label for="paleta-color">Paleta de color</label>
+                            <br>
+                            <select id="paleta-color" name="paleta_color" required>
+                                <option value="rosa-malva" selected>Rosa y malva</option>
+                                <option value="rojo-blanco">Rojo y blanco</option>
+                                <option value="pasteles">Tonos pastel</option>
+                                <option value="girasoles">Amarillo y verde</option>
+                                <option value="personalizada">Quiero proponer otra combinación</option>
+                            </select>
+                            <p><small>Sujeta a disponibilidad de materiales.</small></p>
+                        </div>
+
+                        <fieldset>
+                            <legend>Añade algo más</legend>
+
+                            <div>
+                                <input type="checkbox" id="bombones" name="complementos" value="bombones" checked>
+                                <label for="bombones">Bombones artesanos (+ S/ 8.00)</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="tarjeta" name="complementos" value="tarjeta" checked>
+                                <label for="tarjeta">Tarjeta con dedicatoria (incluida)</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="jarron" name="complementos" value="jarron">
+                                <label for="jarron">Jarrón de cristal (+ S/ 12.00)</label>
+                            </div>
+                        </fieldset>
+
+                        <br>
+
+                        <div>
+                            <label for="dedicatoria">Dedicatoria</label>
+                            <br>
+                            <textarea id="dedicatoria" name="dedicatoria" rows="4" cols="60"
+                                      placeholder="Escribe aquí tu mensaje especial...">Por todo lo vivido y todo lo que nos queda. Te quiero.</textarea>
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <!-- Tercera parte: datos de contacto -->
+                    <section class="bloque" id="datos-contacto">
+                        <h2>03. Para conocernos un poquito</h2>
+
+                        <div>
+                            <label for="nombre-cliente">Tu nombre</label>
+                            <br>
+                            <input type="text" id="nombre-cliente" name="nombre_cliente"
+                                   placeholder="Lucía Martín" autocomplete="name" required>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="correo-cliente">Correo electrónico</label>
+                            <br>
+                            <input type="email" id="correo-cliente" name="correo_cliente"
+                                   placeholder="lucia.martin@example.com" autocomplete="email" required>
+                            <p><small>Aquí te enviaremos la respuesta y el enlace de seguimiento.</small></p>
+                        </div>
+
+                        <div>
+                            <label for="fecha-entrega">Fecha deseada de entrega</label>
+                            <br>
+                            <input type="date" id="fecha-entrega" name="fecha_entrega" required>
+                            <p><small>Confirmaremos si podemos llegar a tiempo antes del pago.</small></p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Resumen del presupuesto: datos de ejemplo, no cálculo automático ------------------------------------>
+                <aside class="resumen-pedido" aria-labelledby="titulo-resumen">
+                    <p>UNA PRIMERA IDEA DEL PRECIO</p>
+                    <h2 id="titulo-resumen">Tu regalo, a medida.</h2>
+
+                    <figure>
+                        <img src="../styles/imagenes/ramo-referencia.png" width="330" height="175"
+                             alt="Ramo rosado usado como imagen ilustrativa del diseño de referencia">
+                        <figcaption>
+                            Imagen ilustrativa. Para la tienda, sustituir por una foto de flores hechas con pipas.
+                        </figcaption>
+                    </figure>
+
+                    <table>
+                        <caption>Estimación orientativa del regalo</caption>
+                        <tbody>
+                            <tr>
+                                <td>18 rosas artesanales de pipas</td>
+                                <td>S/ 79.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bombones artesanos</td>
+                                <td>S/ 8.00</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta y envoltorio</td>
+                                <td>Incluidos</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Estimación</th>
+                                <td><strong>S/ 87.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <p><small>Importes de ejemplo. Envío no incluido. Esta cifra es orientativa, no un precio definitivo.</small></p>
+
+                    <section>
+                        <h3>Enviar no implica comprar</h3>
+                        <p>
+                            Revisaremos las flores, el diseño y la fecha. Te confirmaremos
+                            el precio final o te propondremos una alternativa.
+                            No se realiza ningún cobro al enviar la solicitud.
+                        </p>
+                    </section>
+
+                    <div>
+                        <input type="checkbox" id="acepta-privacidad" name="acepta_privacidad" required>
+                        <label for="acepta-privacidad">
+                            Acepto la política de privacidad y que me contacten sobre esta solicitud.
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <!-- Sin servidor ni JavaScript, este botón no envía datos. -->
+                    <button type="button">Enviar mi propuesta &rarr;</button>
+                    <p><small>Te responderemos en 1–2 días laborables. Sin compromiso y sin pago por adelantado.</small></p>
+                </aside>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer ------------------------------------------------------------------------------------------------------------>
+    <footer>
+        <hr>
+        <p>A primera vista · Flores que se quedan</p>
+    </footer>
+</body>
+</html>
