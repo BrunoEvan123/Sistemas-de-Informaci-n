@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const lista = document.getElementById("lista-solicitudes");
     const contador = document.getElementById("contador-solicitudes");
     const buscar = document.getElementById("buscar-solicitudes");
+    
+    // Establecer la fecha actual como límite mínimo de entrega.
+    const fechaEntrega = document.getElementById("fecha-entrega");
+    const hoy = new Date();
+
+    const anio = hoy.getFullYear();
+    const mes = String(hoy.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoy.getDate()).padStart(2, "0");
+
+    fechaEntrega.min = `${anio}-${mes}-${dia}`;
 
     // Conservamos las solicitudes en memoria y asignamos un identificador a cada una.
     let solicitudes = [];
