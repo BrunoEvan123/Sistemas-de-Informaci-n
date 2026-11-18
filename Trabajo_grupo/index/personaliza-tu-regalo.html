@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personaliza tu regalo | A primera vista</title>
+    <script src="../script/registro_solicitudes.js" defer></script>
 </head>
-
 <body>
     <!-- Navegación -------------------------------------------------------------------------------------------------------->
     <header>
@@ -25,7 +25,6 @@
             </ul>
         </nav>
     </header>
-
     <hr>
 
     <!-- Introducción ------------------------------------------------------------------------------------------------------>
@@ -47,7 +46,6 @@
                 <li>03 Acuerdo y pago</li>
             </ol>
         </nav>
-
         <hr>
 
         <!-- Formulario de personalización ---------------------------------------------------------------------------------->
@@ -65,19 +63,15 @@
                             <input type="text" id="nombre-idea" name="nombre_idea"
                                    placeholder="Para nuestro aniversario" required>
                         </div>
-
                         <br>
-
                         <div>
                             <label for="descripcion-idea">¿Cómo te gustaría que fuera?</label>
                             <br>
                             <textarea id="descripcion-idea" name="descripcion_idea"
-                                      rows="5" cols="60" required
-                                      placeholder="Cuéntanos qué flores, colores y detalles imaginas para tu regalo...">Un ramo romántico de 18 rosas hechas a mano con pipas, en rosa empolvado y malva, con envoltorio marfil y un lazo de satén. Es para nuestro aniversario; me gustaría una composición delicada y muy especial.</textarea>
+                                rows="5" cols="60" required
+                                placeholder="Cuéntanos qué flores, colores y detalles imaginas para tu regalo..."></textarea>
                         </div>
-
                         <br>
-
                         <div>
                             <label for="imagenes-referencia">Imágenes de referencia · Opcional</label>
                             <br>
@@ -87,7 +81,6 @@
                             <p><small>Los límites de cantidad y tamaño necesitarán validación cuando se programe el formulario.</small></p>
                         </div>
                     </section>
-
                     <hr>
 
                     <!-- Segunda parte: características del regalo -->
@@ -101,7 +94,6 @@
                                    min="3" max="50" value="18" required>
                             <p><small>Entre 3 y 50 flores.</small></p>
                         </div>
-
                         <div>
                             <label for="paleta-color">Paleta de color</label>
                             <br>
@@ -114,51 +106,41 @@
                             </select>
                             <p><small>Sujeta a disponibilidad de materiales.</small></p>
                         </div>
-
                         <fieldset>
                             <legend>Añade algo más</legend>
-
                             <div>
                                 <input type="checkbox" id="bombones" name="complementos" value="bombones" checked>
                                 <label for="bombones">Bombones artesanos (+ S/ 8.00)</label>
                             </div>
-
                             <div>
                                 <input type="checkbox" id="tarjeta" name="complementos" value="tarjeta" checked>
                                 <label for="tarjeta">Tarjeta con dedicatoria (incluida)</label>
                             </div>
-
                             <div>
                                 <input type="checkbox" id="jarron" name="complementos" value="jarron">
                                 <label for="jarron">Jarrón de cristal (+ S/ 12.00)</label>
                             </div>
                         </fieldset>
-
                         <br>
-
                         <div>
                             <label for="dedicatoria">Dedicatoria</label>
                             <br>
                             <textarea id="dedicatoria" name="dedicatoria" rows="4" cols="60"
-                                      placeholder="Escribe aquí tu mensaje especial...">Por todo lo vivido y todo lo que nos queda. Te quiero.</textarea>
+                                      placeholder="Escribe aquí tu mensaje especial..."></textarea>
                         </div>
                     </section>
-
                     <hr>
 
                     <!-- Tercera parte: datos de contacto -->
                     <section class="bloque" id="datos-contacto">
                         <h2>03. Para conocernos un poquito</h2>
-
                         <div>
                             <label for="nombre-cliente">Tu nombre</label>
                             <br>
                             <input type="text" id="nombre-cliente" name="nombre_cliente"
                                    placeholder="Lucía Martín" autocomplete="name" required>
                         </div>
-
                         <br>
-
                         <div>
                             <label for="correo-cliente">Correo electrónico</label>
                             <br>
@@ -223,22 +205,29 @@
                             No se realiza ningún cobro al enviar la solicitud.
                         </p>
                     </section>
-
                     <div>
                         <input type="checkbox" id="acepta-privacidad" name="acepta_privacidad" required>
                         <label for="acepta-privacidad">
                             Acepto la política de privacidad y que me contacten sobre esta solicitud.
                         </label>
                     </div>
-
                     <br>
 
-                    <!-- Sin servidor ni JavaScript, este botón no envía datos. -->
+                    <!-- Registro de demostración: los datos se guardan temporalmente en memoria. -->
                     <button type="button">Enviar mi propuesta &rarr;</button>
                     <p><small>Te responderemos en 1–2 días laborables. Sin compromiso y sin pago por adelantado.</small></p>
                 </aside>
             </div>
         </form>
+        <section id="panel-solicitudes">
+            <h2>Solicitudes registradas (demostración)</h2>
+            <p>Total de solicitudes: <span id="contador-solicitudes">0</span></p>
+
+            <label for="buscar-solicitudes">Buscar por nombre o idea</label>
+            <input type="search" id="buscar-solicitudes"
+                   placeholder="Escribe un nombre o una idea">
+            <ul id="lista-solicitudes"></ul>
+        </section>
     </main>
 
     <!-- Footer ------------------------------------------------------------------------------------------------------------>
