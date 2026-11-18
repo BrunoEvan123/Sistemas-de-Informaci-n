@@ -1,0 +1,25 @@
+/* Separar el listado del formulario de personalización. */
+#panel-solicitudes {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #cccccc;
+}
+
+/* Dar espacio al campo usado para buscar las solicitudes. */
+#buscar-solicitudes {
+    display: block;
+    margin: 8px 0 16px;
+    padding: 6px;
+    max-width: 100%;
+}
+
+/* Separar visualmente las solicitudes registradas. */
+#lista-solicitudes li {
+    margin-bottom: 16px;
+}
+
+/* Identificación de los botones de estado. */
+#lista-solicitudes button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
