@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personaliza tu regalo — A primera vista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-pagina="personaliza">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-title">A primera vista</span>
+        <span class="brand-sub">FLORES QUE SE QUEDAN</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Tienda</a>
+        <a href="personaliza.html" class="activo">Personaliza tu regalo</a>
+        <a href="pedidos.html">Mis pedidos <span class="nav-badge" id="badge-pedidos">0</span></a>
+        <a href="taller.html">Espacio del taller</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <span class="etiqueta">UN REGALO QUE SOLO PUEDE SER VUESTRO</span>
+    <h1>Cuéntanos lo que imaginas.</h1>
+    <p class="subtitulo">Lo diseñamos contigo. Primero revisamos tu solicitud en el taller y acordamos los detalles. Solo pagas cuando el diseño y el precio estén confirmados.</p>
+
+    <div class="stepper" aria-hidden="true">
+      <div class="step-item actual">01. Tu idea (Solicitud)</div>
+      <div class="step-item">02. Revisión en taller</div>
+      <div class="step-item">03. Acuerdo confirmado</div>
+      <div class="step-item">04. Pago seguro</div>
+    </div>
+
+    <div class="grid-dos-col">
+      <form id="form-personaliza" novalidate>
+        <div class="bloque-form">
+          <h2>01. Ese regalo que tienes en mente</h2>
+
+          <label for="titulo-idea">Nombre de tu idea *</label>
+          <input id="titulo-idea" type="text" placeholder="Ej. Para nuestro aniversario" required aria-describedby="error-titulo-idea">
+          <p class="error" id="error-titulo-idea"></p>
+
+          <label for="descripcion">¿Cómo te gustaría que fuera? (mínimo 15 caracteres) *</label>
+          <textarea id="descripcion" placeholder="Un ramo romántico de 18 rosas en rosa empolvado y malva, con envoltorio marfil y lazo de satén..." required aria-describedby="error-descripcion"></textarea>
+          <p class="error" id="error-descripcion"></p>
+        </div>
+
+        <div class="bloque-form">
+          <h2>02. Los pequeños detalles</h2>
+
+          <div class="fila-2">
+            <div>
+              <label for="num-flores">Número de flores (3 a 50) *</label>
+              <input id="num-flores" type="number" min="3" max="50" value="18" required aria-describedby="error-num-flores">
+              <p class="error" id="error-num-flores"></p>
+            </div>
+            <div>
+              <label for="paleta">Paleta de color *</label>
+              <select id="paleta">
+                <option value="Rosa empolvado y malva">Rosa empolvado y malva</option>
+                <option value="Rosa empolvado y marfil">Rosa empolvado y marfil</option>
+                <option value="Blanco puro y eucalipto">Blanco puro y eucalipto</option>
+                <option value="Tonos tierra y melocotón">Tonos tierra y melocotón</option>
+              </select>
+            </div>
+          </div>
+
+          <label style="margin-top:16px;">Añade algo más</label>
+          <label class="checkbox-linea">
+            <input type="checkbox" id="extra-bombones" checked>
+            <span>Bombones artesanos (+ 8,00 €)</span>
+          </label>
+          <label class="checkbox-linea">
+            <input type="checkbox" id="extra-jarron">
+            <span>Jarrón de cristal (+ 12,00 €)</span>
+          </label>
+
+          <label for="dedicatoria">Dedicatoria para la tarjeta (incluida)</label>
+          <textarea id="dedicatoria" placeholder="Por todo lo vivido y todo lo que nos queda. Te quiero."></textarea>
+
+          <label for="prioridad">Prioridad de atención</label>
+          <select id="prioridad">
+            <option value="normal">Normal (Revisión estándar en 1–2 días laborables)</option>
+            <option value="urgente">Urgente (Fecha próxima — requiere justificación)</option>
+          </select>
+
+          <div id="bloque-justificacion" hidden>
+            <label for="justificacion">Justificación de urgencia (mínimo 10 caracteres) *</label>
+            <textarea id="justificacion" placeholder="Indica por qué necesitas prioridad urgente..." aria-describedby="error-justificacion"></textarea>
+            <p class="error" id="error-justificacion"></p>
+          </div>
+        </div>
+
+        <div class="bloque-form">
+          <h2>03. Para conocernos un poquito</h2>
+
+          <div class="fila-2">
+            <div>
+              <label for="nombre">Tu nombre y apellidos *</label>
+              <input id="nombre" type="text" placeholder="Lucía Martín" required aria-describedby="error-nombre">
+              <p class="error" id="error-nombre"></p>
+            </div>
+            <div>
+              <label for="correo">Correo electrónico *</label>
+              <input id="correo" type="email" placeholder="lucia.martin@example.com" required aria-describedby="error-correo">
+              <p class="error" id="error-correo"></p>
+            </div>
+          </div>
+
+          <div class="fila-2">
+            <div>
+              <label for="telefono">Teléfono de contacto *</label>
+              <input id="telefono" type="tel" placeholder="612 345 678" required aria-describedby="error-telefono">
+              <p class="error" id="error-telefono"></p>
+            </div>
+            <div>
+              <label for="fecha-entrega">Fecha deseada de entrega *</label>
+              <input id="fecha-entrega" type="date" required aria-describedby="error-fecha-entrega">
+              <p class="error" id="error-fecha-entrega"></p>
+            </div>
+          </div>
+
+          <label class="checkbox-linea" style="margin-top:16px;">
+            <input type="checkbox" id="acepto-privacidad" required aria-describedby="error-acepto-privacidad">
+            <span>Acepto la política de privacidad y que me contacten sobre esta solicitud. *</span>
+          </label>
+          <p class="error" id="error-acepto-privacidad"></p>
+
+          <button type="submit" class="btn btn-primario btn-full" style="margin-top:16px;">
+            Enviar mi propuesta →
+          </button>
+          <p class="estado-msg" id="mensaje" role="status"></p>
+          <p class="info-storage" id="almacenamiento" role="status"></p>
+        </div>
+      </form>
+
+      <aside class="tarjeta-resumen" aria-label="Estimación inicial">
+        <span class="etiqueta">UNA PRIMERA IDEA DEL PRECIO</span>
+        <h2>Tu regalo, a medida.</h2>
+        <div class="linea-costo">
+          <span id="res-flores-txt">18 rosas preservadas</span>
+          <span id="res-flores-precio">79,00 €</span>
+        </div>
+        <div class="linea-costo" id="res-bombones-row">
+          <span>Bombones artesanos</span>
+          <span>8,00 €</span>
+        </div>
+        <div class="linea-costo" id="res-jarron-row" hidden>
+          <span>Jarrón de cristal</span>
+          <span>12,00 €</span>
+        </div>
+        <div class="linea-costo">
+          <span>Tarjeta y envoltorio</span>
+          <span>Incluidos</span>
+        </div>
+        <div class="linea-total">
+          <span>Estimación</span>
+          <strong id="res-total-estimado">87,00 €</strong>
+        </div>
+        <p style="font-size:11.5px; color:var(--text-soft); margin-top:6px;">
+          IVA incluido. Envío no incluido (4,90 €). Esta cifra es orientativa, no un precio definitivo.
+        </p>
+
+        <div class="caja-nota">
+          <strong>Enviar no implica comprar</strong><br>
+          Elena revisará flores, diseño y fecha en el taller. Te confirmará el precio final o te propondrá una alternativa. No se realiza ningún cobro por adelantado.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 A primera vista</span>
+      <span>Los datos se guardan en este navegador (localStorage).</span>
+    </div>
+  </footer>
+</body>
+</html>

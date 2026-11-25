@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A primera vista — Flores que se quedan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-pagina="inicio">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-title">A primera vista</span>
+        <span class="brand-sub">FLORES QUE SE QUEDAN</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html" class="activo">Tienda</a>
+        <a href="personaliza.html">Personaliza tu regalo</a>
+        <a href="pedidos.html">Mis pedidos <span class="nav-badge" id="badge-pedidos">0</span></a>
+        <a href="taller.html">Espacio del taller</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="etiqueta">FLORES ETERNAS · TALLER ARTESANAL</span>
+        <h1>Hay detalles que se quedan.</h1>
+        <p class="subtitulo">Flores naturales preservadas que guardan un instante. Elige un diseño listo para salir en 24–48 h o cuéntanos tu idea para crearlo a medida.</p>
+        <div class="hero-acciones">
+          <a href="#catalogo" class="btn btn-primario">Ver diseños disponibles</a>
+          <a href="personaliza.html" class="btn btn-secundario">Crear el mío →</a>
+        </div>
+      </div>
+      <div class="hero-tarjeta">
+        <span class="badge-estado badge-verde">Envíos cuidados a todo Lima y península</span>
+        <h3 style="margin-top:12px;">Un pequeño gesto. Un recuerdo para siempre.</h3>
+        <p style="font-size:13.5px; color:var(--text-muted); margin:8px 0 16px;">Conservan su belleza sin agua ni cuidados complicados. Cada pedido incluye envoltorio artesanal y tarjeta con dedicatoria escrita a mano.</p>
+        <a href="producto.html?id=siempre-tu" class="btn btn-suave btn-full">Explorar «Siempre tú» — 59,00 €</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="contenedor" id="catalogo">
+    <span class="etiqueta">ELEGIDOS CON EL CORAZÓN</span>
+    <h2>Tu próximo «me acordé de ti».</h2>
+    <p class="subtitulo">Diseños en stock, listos para preparar. Elige un arreglo para ver sus detalles o regístralo directamente.</p>
+
+    <div class="filtros-catalogo" role="group" aria-label="Filtrar categoría">
+      <button type="button" class="chip activo" data-categoria="todos">Todos los diseños</button>
+      <button type="button" class="chip" data-categoria="ramos">Ramos eternos</button>
+      <button type="button" class="chip" data-categoria="cajas">Cajas de flores</button>
+      <button type="button" class="chip" data-categoria="detalles">Pequeños detalles</button>
+    </div>
+
+    <div class="grid-catalogo" id="grid-catalogo"></div>
+
+    <section class="banner-custom">
+      <div>
+        <span class="etiqueta">TÚ LO IMAGINAS. NOSOTRAS LO CUIDAMOS.</span>
+        <h2>Tan único como su historia.</h2>
+        <p style="font-size:14px; color:var(--text-muted); margin:0;">Una paleta especial, una dedicatoria, sus flores favoritas. Cuéntanos tu idea: la revisamos en el taller y solo pagas cuando confirmes el diseño y el precio final.</p>
+        <div class="pasos-mini">
+          <div class="paso-box"><strong>01. Comparte tu idea</strong>Referencias, flores y fecha deseada.</div>
+          <div class="paso-box"><strong>02. La revisamos juntas</strong>Confirmamos disponibilidad o contrapropuesta.</div>
+          <div class="paso-box"><strong>03. Solo pagas al confirmar</strong>Sin cobros por adelantado.</div>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <a href="personaliza.html" class="btn btn-primario">Diseñar mi regalo →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 A primera vista · Flores que se quedan</span>
+      <span>Taller artesanal · hola@aprimeravista.es</span>
+    </div>
+  </footer>
+</body>
+</html>

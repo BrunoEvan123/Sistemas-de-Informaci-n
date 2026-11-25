@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis pedidos — A primera vista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-pagina="pedidos">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-title">A primera vista</span>
+        <span class="brand-sub">FLORES QUE SE QUEDAN</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Tienda</a>
+        <a href="personaliza.html">Personaliza tu regalo</a>
+        <a href="pedidos.html" class="activo">Mis pedidos <span class="nav-badge" id="badge-pedidos">0</span></a>
+        <a href="taller.html">Espacio del taller</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+      <div>
+        <span class="etiqueta">EL CAMINO DE TU REGALO</span>
+        <h1>Mis pedidos y solicitudes</h1>
+        <p class="subtitulo" style="margin-bottom:0;">Consulta el estado de tus solicitudes, acepta propuestas del taller o continúa hacia el pago seguro.</p>
+      </div>
+      <a href="personaliza.html" class="btn btn-primario">+ Nueva solicitud personalizada</a>
+    </div>
+
+    <div class="bloque-form" style="padding:18px 20px;">
+      <div class="fila-2">
+        <div>
+          <label for="buscar-pedido">Buscar por código, nombre o descripción</label>
+          <input id="buscar-pedido" type="search" placeholder="Ej. APV-1042, Lucía, aniversario...">
+        </div>
+        <div>
+          <label for="filtro-estado-pedido">Filtrar por estado</label>
+          <select id="filtro-estado-pedido">
+            <option value="todos">Todos los estados</option>
+            <option value="Pendiente de revisión">Pendiente de revisión</option>
+            <option value="Contrapropuesta">Respuesta pendiente (Contrapropuesta)</option>
+            <option value="Confirmado">Confirmado (Pago habilitado)</option>
+            <option value="Pagado">Pagado / En preparación</option>
+            <option value="No viable">No viable (Cerrada)</option>
+          </select>
+        </div>
+      </div>
+      <p class="info-storage" id="contador-pedidos" role="status" style="margin-top:10px;"></p>
+      <p class="info-storage" id="almacenamiento" role="status"></p>
+    </div>
+
+    <section id="lista-pedidos" aria-label="Listado de pedidos del cliente"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 A primera vista</span>
+      <span>Persistencia local activa · Tus solicitudes permanecen al recargar la página.</span>
+    </div>
+  </footer>
+</body>
+</html>
